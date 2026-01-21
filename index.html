@@ -7,10 +7,25 @@
     body { font-family: sans-serif; margin: 40px; }
     img { max-width: 100%; height: auto; display: block; margin-top: 20px; }
     .caption { color: #555; font-size: 0.9rem; margin-top: 8px; margin-bottom: 30px; }
+    .summary { max-width: 900px; margin-bottom: 40px; line-height: 1.5; }
   </style>
 </head>
 <body>
   <h1>Property Tax Trend</h1>
+
+  <div class="summary">
+    <p>
+      This analysis compares two complementary ways of understanding the same dataset:
+      the histogram and the empirical quantile distribution. Histograms emphasize
+      frequency by grouping values into bins, making them useful for seeing overall
+      shape, clustering, and rough skew, but they depend heavily on bin width and can
+      obscure extreme values. Empirical quantile distributions, by contrast, preserve
+      the full ordering of the data and show how values accumulate across percentiles,
+      making inequality, concentration, and tail behavior immediately visible. Used
+      together, the histogram provides intuitive distributional context, while the
+      quantile view reveals structural imbalance that frequency-based summaries often hide.
+    </p>
+  </div>
 
   <img src="images/my_chart.png" alt="Empirical quantile distribution">
   <div class="caption">
