@@ -14,18 +14,20 @@
   <h1>Property Tax Trend</h1>
 
   <div class="summary">
+    <h2>Summary</h2>
     <p>
-      SUMMARY
+      
 This analysis compares two complementary ways of understanding the same dataset: the histogram and the empirical quantile distribution. Histograms emphasize frequency by grouping values into bins, making them useful for seeing overall shape, clustering, and rough skew, but they depend heavily on bin width and can obscure extreme values. Empirical quantile distributions, by contrast, preserve the full ordering of the data and show how values accumulate across percentiles, making inequality, concentration, and tail behavior immediately visible. Used together, the histogram provides intuitive distributional context, while the quantile view reveals structural imbalance that frequency-based summaries often hide.
-
-GETTING THE DATA
+    </p>
+    <h2>Getting the Data</h2>
+    <p>
 The dataset used in this analysis comes from public Chicago–Cook County real estate records. Chicago stands out nationally for the quality, scope, and accessibility of its property transaction data: records are well structured, historically deep, and publicly available without restrictive licensing. This makes the city an ideal case study for examining real estate distributions at scale, particularly when the goal is exploratory analysis rather than anecdotal market insight.
 For this initial overview, the data was exported as a flat CSV file rather than accessed through a live API. A CSV provides a stable snapshot that is easy to inspect, validate, and share, and it avoids introducing network or authentication complexity at the exploratory stage. Future feature pages will transition to direct API connections to support reproducibility, automation, and incremental updates.
-
-ABOUT THE DATA
+    <p/>
+    <h2>ABOUT THE DATA</h2>
+    <p>
 The file contains approximately 2.6 million records, with each row representing an individual property transaction in Chicago. The dataset spans transactions from 1971 through 2012, capturing multiple market cycles, policy regimes, and structural changes in the city’s real estate landscape. Columns include transaction dates, sale prices, and property classifications, among other attributes.
 Importantly, the dataset includes all property types, not just residential homes. As a result, the distribution reflects a mix of small residential sales, large commercial or industrial transactions, administrative transfers, and non-market events. A small number of very high-value transactions occupy the extreme upper tail, while the vast majority of records cluster at low price points. Many transactions occur at zero or near-zero prices, representing deeds, corrections, or internal transfers rather than arm’s-length sales. This extreme imbalance is not a data error—it is a structural feature of the underlying system and a primary reason percentile-based views are necessary.
-
     </p>
   </div>
 
@@ -46,4 +48,5 @@ Importantly, the dataset includes all property types, not just residential homes
 
 </body>
 </html>
+
 
